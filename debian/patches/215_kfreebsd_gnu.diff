@@ -2,10 +2,10 @@
  src/joystick/bsd/SDL_sysjoystick.c |   14 +++++++-------
  1 file changed, 7 insertions(+), 7 deletions(-)
 
-Index: SDL-1.2.14/src/joystick/bsd/SDL_sysjoystick.c
+Index: libsdl1.2-1.2.14/src/joystick/bsd/SDL_sysjoystick.c
 ===================================================================
---- SDL-1.2.14.orig/src/joystick/bsd/SDL_sysjoystick.c	2009-10-12 19:07:13.000000000 -0400
-+++ SDL-1.2.14/src/joystick/bsd/SDL_sysjoystick.c	2009-11-28 09:18:11.000000000 -0500
+--- libsdl1.2-1.2.14.orig/src/joystick/bsd/SDL_sysjoystick.c	2009-10-13 01:07:13.000000000 +0200
++++ libsdl1.2-1.2.14/src/joystick/bsd/SDL_sysjoystick.c	2010-01-09 17:32:25.000000000 +0100
 @@ -59,7 +59,7 @@
  #include <libusbhid.h>
  #endif
@@ -15,6 +15,15 @@ Index: SDL-1.2.14/src/joystick/bsd/SDL_sysjoystick.c
  #ifndef __DragonFly__
  #include <osreldate.h>
  #endif
+@@ -78,7 +78,7 @@
+ #define MAX_JOY_JOYS	2
+ #define MAX_JOYS	(MAX_UHID_JOYS + MAX_JOY_JOYS)
+ 
+-#if defined(__FREEBSD__) && (__FreeBSD_kernel_version > 800063)
++#if defined(__FREEBSD__) && (__FreeBSD_kernel_version > 800063) && false
+ struct usb_ctl_report {
+ 	int	ucr_report;
+ 	u_char	ucr_data[1024]; /* filled data size will vary */
 @@ -148,7 +148,7 @@
  static int	report_alloc(struct report *, struct report_desc *, int);
  static void	report_free(struct report *);

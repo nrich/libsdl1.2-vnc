@@ -1,3 +1,13 @@
+libsdl1.2 (1.2.14-2) unstable; urgency=low
+
+  [ Barry deFreese ]
+  * Upload to unstable.
+  * Update 215_kfreebsd_gnu.diff patch to fix FTBFS on kFreeBSD.
+    + Thanks to Christoph Egger for the fix!
+  * Add ${misc:Depends} for binary packages for Debhelper package.
+
+ -- Barry deFreese <bdefreese@debian.org>  Mon, 11 Jan 2010 10:34:12 -0500
+
 libsdl1.2 (1.2.14-1) experimental; urgency=low
 
   [ Barry deFreese ]

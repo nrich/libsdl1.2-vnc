@@ -11,7 +11,7 @@ Homepage: http://www.libsdl.org/
 
 Package: libsdl1.2debian
 Architecture: any
-Depends: libsdl1.2debian-alsa (= ${binary:Version}) | libsdl1.2debian-all (= ${binary:Version}) | libsdl1.2debian-esd (= ${binary:Version}) | libsdl1.2debian-arts (= ${binary:Version}) | libsdl1.2debian-oss (= ${binary:Version}) | libsdl1.2debian-nas (= ${binary:Version}) | libsdl1.2debian-pulseaudio (= ${binary:Version})
+Depends: ${misc:Depends}, libsdl1.2debian-alsa (= ${binary:Version}) | libsdl1.2debian-all (= ${binary:Version}) | libsdl1.2debian-esd (= ${binary:Version}) | libsdl1.2debian-arts (= ${binary:Version}) | libsdl1.2debian-oss (= ${binary:Version}) | libsdl1.2debian-nas (= ${binary:Version}) | libsdl1.2debian-pulseaudio (= ${binary:Version})
 Description: Simple DirectMedia Layer
  SDL is a library that allows programs portable low level access to
  a video framebuffer, audio output, mouse, and keyboard.
@@ -24,7 +24,7 @@ Description: Simple DirectMedia Layer
 
 Package: libsdl1.2debian-all
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-arts, libsdl1.2debian-nas, libsdl1.2-nas
 Conflicts: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-arts, libsdl1.2debian-nas, libsdl1.2-nas
 Provides: libsdl1.2-all
@@ -38,7 +38,7 @@ Description: Simple DirectMedia Layer (with all available options)
 Package: libsdl1.2debian-alsa
 Architecture: linux-any
 Priority: extra
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-arts, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-nas, libsdl1.2-nas, libsdl1.2debian-pulseaudio
 Conflicts: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-arts, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-nas, libsdl1.2-nas, libsdl1.2debian-pulseaudio
 Description: Simple DirectMedia Layer (with X11 and ALSA options)
@@ -50,7 +50,7 @@ Description: Simple DirectMedia Layer (with X11 and ALSA options)
 Package: libsdl1.2debian-oss
 Architecture: any
 Priority: extra
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-arts, libsdl1.2debian-nas, libsdl1.2-nas, libsdl1.2debian-pulseaudio
 Conflicts: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-arts, libsdl1.2debian-nas, libsdl1.2-nas, libsdl1.2debian-pulseaudio
 Provides: libsdl1.2-oss
@@ -63,7 +63,7 @@ Description: Simple DirectMedia Layer (with X11 and OSS options)
 Package: libsdl1.2debian-esd
 Architecture: any
 Priority: extra
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-oss, libsdl1.2debian-arts, libsdl1.2debian-nas, libsdl1.2-nas, libsdl1.2debian-pulseaudio
 Conflicts: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-oss, libsdl1.2debian-arts, libsdl1.2debian-nas, libsdl1.2-nas, libsdl1.2debian-pulseaudio
 Provides: libsdl1.2-esd
@@ -76,7 +76,7 @@ Description: Simple DirectMedia Layer (with X11 and esound options)
 Package: libsdl1.2debian-arts
 Architecture: any
 Priority: extra
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-nas, libsdl1.2-nas, libsdl1.2debian-pulseaudio
 Conflicts: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-nas, libsdl1.2-nas, libsdl1.2debian-pulseaudio
 Provides: libsdl1.2-arts
@@ -89,7 +89,7 @@ Description: Simple DirectMedia Layer (with X11 and aRts options)
 Package: libsdl1.2debian-nas
 Architecture: any
 Priority: extra
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-arts, libsdl1.2debian-pulseaudio
 Conflicts: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-arts, libsdl1.2debian-pulseaudio
 Provides: libsdl1.2-nas
@@ -102,7 +102,7 @@ Description: Simple DirectMedia Layer (with X11 and NAS options)
 Package: libsdl1.2debian-pulseaudio
 Architecture: any
 Priority: extra
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-arts
 Conflicts: libsdl1.2-all, libsdl1.2-esd, libsdl1.2-oss, libsdl1.2-arts, libsdl1.2 (<< 1.2.1-1), libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-oss, libsdl1.2debian-arts
 Description: Simple DirectMedia Layer (with X11 and PulseAudio options)
@@ -116,7 +116,7 @@ XC-Package-Type: udeb
 Architecture: any
 Section: debian-installer
 Priority: extra
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Simple DirectMedia Layer (with directfb graphics and no sound)
  SDL is a library that allows programs portable low level access to a video
  framebuffer, audio output, mouse, and keyboard.
@@ -126,7 +126,7 @@ Description: Simple DirectMedia Layer (with directfb graphics and no sound)
 Package: libsdl1.2-dev
 Architecture: any
 Section: libdevel
-Depends: libsdl1.2debian (= ${binary:Version}), libx11-dev, libglu1-mesa-dev
+Depends: ${misc:Depends}, libsdl1.2debian (= ${binary:Version}), libx11-dev, libglu1-mesa-dev
 Recommends: libxt-dev, libxext-dev, libsvga1-dev [amd64 i386], libasound2-dev [linux-any], libaa1-dev, libaudio-dev, libartsc0-dev, libesd0-dev, libdirectfb-dev (>= 0.9.22), libusbhid-dev [kfreebsd-any], libcaca-dev
 Replaces: libsdl-dev, libsdl0.11-dev, libsdl1.0-dev, libsdl1.1-dev
 Conflicts: xlibs-pic (<< 4.1.0-10), libsdl-dev, libsdl0.11-dev, libsdl0.11, libsdl1.0-dev, libsdl1.1-dev
