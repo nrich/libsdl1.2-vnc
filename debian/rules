@@ -67,6 +67,11 @@ ifeq ($(DEB_BUILD_ARCH_CPU),i386)
   confflags += --enable-nasm
 endif
 
+# Don't use PlayStation 3 Cell driver on powerpc
+ifeq ($(DEB_BUILD_ARCH_CPU),powerpc)
+  confflags += --enable-video-ps3=no
+endif
+
 # Only build ALSA support on Linux targets
 ifeq ($(DEB_BUILD_ARCH_OS),linux)
   FLAVOURS += alsa

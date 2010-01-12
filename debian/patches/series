@@ -13,4 +13,5 @@
 215_kfreebsd_gnu.diff
 217_x11_keytounicode.diff
 221_check_SDL_NOKBD_environment_variable.diff
+222_joystick_crash.diff
 300_dont_propagate_lpthread.diff
