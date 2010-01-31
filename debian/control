@@ -126,8 +126,7 @@ Description: Simple DirectMedia Layer (with directfb graphics and no sound)
 Package: libsdl1.2-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}, libsdl1.2debian (= ${binary:Version}), libx11-dev, libglu1-mesa-dev
-Recommends: libxt-dev, libxext-dev, libsvga1-dev [amd64 i386], libasound2-dev [linux-any], libaa1-dev, libaudio-dev, libartsc0-dev, libesd0-dev, libdirectfb-dev (>= 0.9.22), libusbhid-dev [kfreebsd-any], libcaca-dev
+Depends: ${misc:Depends}, libsdl1.2debian (= ${binary:Version}), libx11-dev, libglu1-mesa-dev, libasound2-dev [linux-any], libartsc0-dev, libesd0-dev,libpulse-dev, libdirectfb-dev (>= 0.9.22), libsvga1-dev [amd64 i386], libaa1-dev, libcaca-dev, libusbhid-dev [kfreebsd-any], libxt-dev, libxext-dev, libaudio-dev
 Replaces: libsdl-dev, libsdl0.11-dev, libsdl1.0-dev, libsdl1.1-dev
 Conflicts: xlibs-pic (<< 4.1.0-10), libsdl-dev, libsdl0.11-dev, libsdl0.11, libsdl1.0-dev, libsdl1.1-dev
 Provides: libsdl-dev
