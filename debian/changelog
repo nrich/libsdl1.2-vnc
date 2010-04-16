@@ -1,3 +1,12 @@
+libsdl1.2 (1.2.14-5) unstable; urgency=low
+
+  * Add 310_fixmouseclicks.diff to fix problems with left-mouse clicks
+      not working in Wesnoth in windowed mode.  Partially reverts the fix
+      for upstream bug #716 (r4872).  (Closes: #565788).
+      Thanks to Adam D. Barratt for the fix.
+
+ -- Barry deFreese <bdefreese@debian.org>  Fri, 16 Apr 2010 09:26:29 -0400
+
 libsdl1.2 (1.2.14-4) unstable; urgency=low
 
   * Move -dev Recommends back to Depends, as other packages may want to 
