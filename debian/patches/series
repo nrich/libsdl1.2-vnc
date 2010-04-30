@@ -16,3 +16,4 @@
 222_joystick_crash.diff
 300_dont_propagate_lpthread.diff
 310_fixmouseclicks
+320_disappearingcursor.diff

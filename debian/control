@@ -3,7 +3,7 @@ Priority: optional
 Section: libs
 Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
 Uploaders: Sam Hocevar (Debian packages) <sam+deb@zoy.org>, Aurelien Jarno <aurel32@debian.org>, Josselin Mouette <joss@debian.org>, Barry deFreese <bdefreese@debian.org>
-Standards-Version: 3.8.3
+Standards-Version: 3.8.4
 Build-Depends: dpkg (>= 1.13.2), debhelper (>= 5.0), quilt, nasm [i386 kfreebsd-i386], libaa1-dev, libx11-dev, libxext-dev, libxt-dev, libxv-dev, x11proto-core-dev, libaudiofile-dev, libesd0-dev, libpulse-dev, libgl1-mesa-dev, libsvga1-dev [amd64 i386], libarts1-dev, libartsc0-dev, libasound2-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], libaudio-dev, libcaca-dev, libdirectfb-dev (>= 1.0) [!hurd-i386], libusbhid-dev [kfreebsd-i386 kfreebsd-amd64], libglu1-mesa-dev
 Vcs-Svn: svn://svn.debian.org/pkg-sdl/unstable/libsdl.2
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-sdl/unstable/libsdl1.2/
