@@ -1,3 +1,18 @@
+libsdl1.2 (1.2.14-6.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Remove arts as build dependency as is being removed from the archive
+    (Closes: #620982, #581231).
+    - Remove libsdl1.2debian-arts.
+    - Remove references to arts in other packages that this source provides.
+    - Pass --disable-arts to the configure script.
+  
+  [ Ana Beatriz Guerrero Lopez ]
+
+  * Update uploaders, remove aurel32, joss and sho.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <perezmeyer@gmail.com>  Fri, 08 Apr 2011 23:35:29 +0200
+
 libsdl1.2 (1.2.14-6.1) unstable; urgency=medium
 
   * Non-maintainer upload.

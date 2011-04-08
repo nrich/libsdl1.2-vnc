@@ -28,7 +28,7 @@ confflags += --disable-rpath --enable-dlopen \
 	     --enable-dependency-tracking \
 	     --enable-arts-shared=no --enable-alsa-shared=no \
 	     --enable-esd-shared=no --enable-pulseaudio-shared=no
-all_confflags = --disable-video-ggi \
+all_confflags = --disable-video-ggi --disable-arts \
 		--enable-video-aalib --enable-video-directfb \
 		--enable-video-caca
 udeb_confflags = --enable-video-directfb --disable-video-ggi \
@@ -41,7 +41,7 @@ udeb_confflags = --enable-video-directfb --disable-video-ggi \
 		 --disable-audio-oss --disable-audio-nas --disable-audio-alsa \
 		 --disable-pulseaudio
 
-FLAVOURS = arts esd oss nas pulseaudio
+FLAVOURS = esd oss nas pulseaudio
 
 ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
   confflags += --build $(DEB_HOST_GNU_TYPE)
