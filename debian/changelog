@@ -1,3 +1,14 @@
+libsdl1.2 (1.2.14-6.3) unstable; urgency=low
+
+  * Non-maintainer upload with maintainer’s approval.
+  * Merge all builds into a single one, there is no more a reason to 
+    keep all these packages.
+  * Remove support for libaa (there’s libcaca), libsvga (directfb 
+    supports more architectures) and libesd (pulseaudio does much more).
+  * Remove obsolete sys-build.mk from source directory.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 16 Apr 2011 18:25:59 +0200
+
 libsdl1.2 (1.2.14-6.2) unstable; urgency=low
 
   * Non-maintainer upload.

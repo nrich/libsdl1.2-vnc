@@ -12,7 +12,7 @@ else
 NJOBS := 1
 endif
 
-export SHLIBVER=(>= 1.2.10-1)
+export SHLIBVER=1.2.10-1
 
 DEB_HOST_GNU_TYPE	?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE	?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -30,7 +30,8 @@ confflags += --disable-rpath --enable-dlopen \
 	     --enable-esd-shared=no --enable-pulseaudio-shared=no
 all_confflags = --disable-video-ggi --disable-arts \
 		--enable-video-aalib --enable-video-directfb \
-		--enable-video-caca
+		--enable-video-caca --disable-esd \
+		--disable-video-svga
 udeb_confflags = --enable-video-directfb --disable-video-ggi \
 		 --disable-video-svga --disable-video-x11 \
 		 --disable-video-aalib --disable-dga --disable-video-photon \
@@ -40,8 +41,6 @@ udeb_confflags = --enable-video-directfb --disable-video-ggi \
 		 --disable-audio --disable-audio-arts --disable-audio-esd \
 		 --disable-audio-oss --disable-audio-nas --disable-audio-alsa \
 		 --disable-pulseaudio
-
-FLAVOURS = esd oss nas pulseaudio
 
 ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
   confflags += --build $(DEB_HOST_GNU_TYPE)
@@ -73,33 +72,18 @@ ifeq ($(DEB_BUILD_ARCH_CPU),powerpc)
 	       --disable-altivec
 endif
 
-# Only build ALSA support on Linux targets
-ifeq ($(DEB_BUILD_ARCH_OS),linux)
-  FLAVOURS += alsa
-  no_libasound =
-else
-  no_libasound = -Nlibsdl1.2debian-alsa
-endif
-
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	QUILT_PATCHES=debian/patches quilt push -a || test $$? = 2
 	touch configure # Fix timestamp
-	for dir in all $(FLAVOURS) udeb; do \
+	for dir in all udeb; do \
 	    if ( [ "$$dir" = "all" ] ); then \
 	        SWITCHES="$(all_confflags)"; \
 	    elif ( [ "$$dir" = "udeb" ] ); then \
 	        SWITCHES="$(udeb_confflags)"; \
 	    else \
 	        SWITCHES=""; \
-	        for switch in $(FLAVOURS); do \
-	            if ( [ "$$dir" = "$$switch" ] ); then \
-	                SWITCHES="$$SWITCHES --enable-$$switch"; \
-	            else \
-	                SWITCHES="$$SWITCHES --disable-$$switch"; \
-	            fi; \
-	        done; \
 	    fi; \
 	    mkdir -p builddir/$$dir; \
 	    (cd builddir/$$dir; ../../configure $(confflags) $$SWITCHES); \
@@ -109,7 +93,7 @@ configure-stamp:
 build: build-stamp
 build-stamp: configure-stamp
 	dh_testdir
-	for dir in all $(FLAVOURS) udeb; do \
+	for dir in all udeb; do \
 	    $(MAKE) -j $(NJOBS) -C builddir/$$dir || exit 1; \
 	done
 	touch build-stamp
@@ -151,23 +135,17 @@ binary-arch: build install
 	dh_installchangelogs
 	dh_install --sourcedir=debian/tmp
 	sed -i -e "s/^dependency_libs=.*/dependency_libs=''/" debian/libsdl1.2-dev/usr/lib/libSDL.la
-	for dir in $(FLAVOURS) udeb; do \
-	    dh_install --sourcedir=builddir/$$dir/ -plibsdl1.2debian-$$dir build/.libs/*.so.* usr/lib/; \
-	done
+	dh_install --sourcedir=builddir/udeb/ -plibsdl1.2debian-udeb build/.libs/*.so.* usr/lib/;
 	rm -rf debian/libsdl1.2debian/usr/include
 	dh_strip
 	dh_compress
 	dh_fixperms
-	dh_makeshlibs
-	for dir in all $(FLAVOURS) ; do \
-		echo "libSDL-1.2 0 libsdl1.2debian $$SHLIBVER" > debian/libsdl1.2debian-$$dir/DEBIAN/shlibs; \
-		echo "udeb: libSDL-1.2 0 libsdl1.2debian-udeb $$SHLIBVER" >> debian/libsdl1.2debian-$$dir/DEBIAN/shlibs; \
-	done
+	dh_makeshlibs -V"libsdl1.2debian (>= $(SHLIBVER))" --add-udeb=libsdl1.2debian-udeb
 	dh_installdeb
 	dh_shlibdeps
-	dh_gencontrol $(no_libasound) 
+	dh_gencontrol
 	dh_md5sums
-	dh_builddeb $(no_libasound)
+	dh_builddeb
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary
