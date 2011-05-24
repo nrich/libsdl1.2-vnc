@@ -1,3 +1,20 @@
+libsdl1.2 (1.2.14-6.4) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Build improvements from Guillem Jover that should really have gone 
+    with the previous upload. Closes: #614332.
+    + Line-wrap build-depends.
+    + Use -any syntax for architecture-specific stuff.
+    + Fix cross-compilation by using DEB_HOST_* variables.
+    + Update or remove non-existing configure flags.
+    + Forbid dlopening for X11.
+  * Use --enable-debug with the debug keyword, not the noopt one.
+  * Refactor configure options.
+  * Disable NAS. We have PulseAudio now.
+  * Pass --disable-loadso, just to be sure.
+
+ -- Josselin Mouette <joss@debian.org>  Tue, 24 May 2011 22:51:57 +0200
+
 libsdl1.2 (1.2.14-6.3) unstable; urgency=low
 
   * Non-maintainer upload with maintainer’s approval.

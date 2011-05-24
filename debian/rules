@@ -14,33 +14,31 @@ endif
 
 export SHLIBVER=1.2.10-1
 
+DEB_HOST_ARCH		?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_ARCH_OS	?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
+DEB_HOST_ARCH_CPU	?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 DEB_HOST_GNU_TYPE	?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE	?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
-DEB_BUILD_ARCH		?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
-DEB_BUILD_ARCH_OS	?= $(shell dpkg-architecture -qDEB_BUILD_ARCH_OS)
-DEB_BUILD_ARCH_CPU	?= $(shell dpkg-architecture -qDEB_BUILD_ARCH_CPU)
 
 export DEB_HOST_GNU_TYPE
 export DEB_BUILD_GNU_TYPE
 
 confflags = --prefix=/usr
-confflags += --disable-rpath --enable-dlopen \
-	     --enable-dependency-tracking \
-	     --enable-arts-shared=no --enable-alsa-shared=no \
-	     --enable-esd-shared=no --enable-pulseaudio-shared=no
-all_confflags = --disable-video-ggi --disable-arts \
-		--enable-video-aalib --enable-video-directfb \
-		--enable-video-caca --disable-esd \
-		--disable-video-svga
-udeb_confflags = --enable-video-directfb --disable-video-ggi \
-		 --disable-video-svga --disable-video-x11 \
-		 --disable-video-aalib --disable-dga --disable-video-photon \
+confflags += --disable-rpath --enable-sdl-dlopen --disable-loadso \
+	     --disable-video-ggi --disable-video-svga --disable-video-aalib \
+	     --disable-nas --disable-esd --disable-arts \
+	     --disable-alsa-shared --disable-pulseaudio-shared \
+	     --disable-x11-shared \
+	     --enable-video-directfb
+all_confflags = --enable-video-caca
+udeb_confflags = --enable-video-directfb \
+		 --disable-video-x11 \
+		 --disable-dga --disable-video-photon \
 		 --disable-video-fbcon --disable-video-ps2gs \
 		 --disable-video-opengl --disable-video-xbios \
 		 --disable-video-gem --disable-video-caca \
-		 --disable-audio --disable-audio-arts --disable-audio-esd \
-		 --disable-audio-oss --disable-audio-nas --disable-audio-alsa \
-		 --disable-pulseaudio
+		 --disable-audio \
+		 --disable-oss --disable-alsa --disable-pulseaudio
 
 ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
   confflags += --build $(DEB_HOST_GNU_TYPE)
@@ -49,25 +47,19 @@ else
 endif
 
 # Support for DEB_BUILD_OPTIONS
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
   confflags += --enable-debug
 else
   confflags += --disable-debug
 endif
 
-# Only build SVGA support on linux-x86 and linux-amd64
-ifneq (,$(findstring $(DEB_BUILD_ARCH),amd64 i386))
-  all_confflags += --enable-video-svga
-else
-  all_confflags += --disable-video-svga
-endif
 # Only use NASM routines on x86 CPUs
-ifeq ($(DEB_BUILD_ARCH_CPU),i386)
+ifeq ($(DEB_HOST_ARCH_CPU),i386)
   confflags += --enable-nasm
 endif
 
 # Don't use PlayStation 3 Cell driver on powerpc
-ifeq ($(DEB_BUILD_ARCH_CPU),powerpc)
+ifeq ($(DEB_HOST_ARCH_CPU),powerpc)
   confflags += --enable-video-ps3=no \
 	       --disable-altivec
 endif
