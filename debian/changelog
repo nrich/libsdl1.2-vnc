@@ -6,6 +6,7 @@ libsdl1.2 (1.2.14-7) UNRELEASED; urgency=low
   * Drop ancient Conflicts/Replaces.
   * Disable the PlayStation 3 Cell driver on ppc64. (Closes: #644908)
   * Update Vcs control fields to the new git repository. (Closes: #615902)
+  * Drop sequence numbers from the patch filenames.
 
  -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 30 Nov 2011 18:00:50 +0100
 
