@@ -19,8 +19,8 @@ Build-Depends: debhelper (>= 8),
                libdirectfb-dev (>= 1.0) [!hurd-i386],
                libusbhid-dev [kfreebsd-any],
                libglu1-mesa-dev
-Vcs-Svn: svn://svn.debian.org/pkg-sdl/unstable/libsdl.2
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-sdl/unstable/libsdl1.2/
+Vcs-Git: git://anonscm.debian.org/pkg-sdl/packages/libsdl1.2.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-sdl/packages/libsdl1.2.git
 Homepage: http://www.libsdl.org/
 
 Package: libsdl1.2debian
