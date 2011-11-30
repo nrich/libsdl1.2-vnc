@@ -2,7 +2,8 @@ Source: libsdl1.2
 Priority: optional
 Section: libs
 Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
-Uploaders: Barry deFreese <bdefreese@debian.org>
+Uploaders: Barry deFreese <bdefreese@debian.org>,
+           Felix Geyer <debfx-pkg@fobos.de>
 Standards-Version: 3.9.2
 Build-Depends: debhelper (>= 8),
                nasm [any-i386],
