@@ -1,7 +1,8 @@
 usr/include/SDL
-usr/lib/libSDL-1.2.a
-usr/lib/libSDL-1.2.so
-usr/lib/libSDL-1.2.la
+usr/lib/libSDL.a
+usr/lib/libSDLmain.a
+usr/lib/libSDL.so
+usr/lib/libSDL.la
 usr/lib/pkgconfig
 usr/bin/sdl-config
 usr/share/aclocal/*
