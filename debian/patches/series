@@ -10,3 +10,4 @@ dont_propagate_lpthread.diff
 fixmouseclicks.diff
 disappearingcursor.diff
 sdlblit_memcpy_fix.diff
+x11_add_support_NET_WM_PID.diff

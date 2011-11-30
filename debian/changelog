@@ -10,6 +10,9 @@ libsdl1.2 (1.2.14-7) UNRELEASED; urgency=low
   * Fix: SDL_BlitCopyOverlap() copies data between overlapping bitmaps.
     (Closes: #626048)
     - Add sdlblit_memcpy_fix.diff, cherry-picked from upstream.
+  * Set _NET_WM_PID property in X11 windows which is used by GNOME Shell and the
+    Unity desktop.
+    - Add x11_add_support_NET_WM_PID.diff from Ubuntu / Marco Trevisan.
 
  -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 30 Nov 2011 18:00:50 +0100
 
