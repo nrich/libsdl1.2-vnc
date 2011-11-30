@@ -76,8 +76,8 @@ Depends: ${misc:Depends},
          libusbhid-dev [kfreebsd-any],
          libxt-dev,
          libxext-dev
-Replaces: libsdl-dev, libsdl0.11-dev, libsdl1.0-dev, libsdl1.1-dev
-Conflicts: xlibs-pic (<< 4.1.0-10), libsdl-dev, libsdl0.11-dev, libsdl0.11, libsdl1.0-dev, libsdl1.1-dev
+Replaces: libsdl-dev
+Conflicts: libsdl-dev
 Provides: libsdl-dev
 Description: Simple DirectMedia Layer development files
  SDL is a library that allows programs portable low level access to a video
