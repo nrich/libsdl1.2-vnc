@@ -23,8 +23,8 @@ ifeq ($(DEB_HOST_ARCH_CPU),i386)
 	confflags += --enable-nasm
 endif
 
-# Don't use PlayStation 3 Cell driver on powerpc
-ifeq ($(DEB_HOST_ARCH_CPU),powerpc)
+# Don't use PlayStation 3 Cell driver on powerpc and ppc64
+ifneq (,$(findstring $(DEB_HOST_ARCH_CPU),powerpc ppc64))
 	confflags += --enable-video-ps3=no \
 	             --disable-altivec
 endif
