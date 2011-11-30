@@ -3,7 +3,7 @@ Priority: optional
 Section: libs
 Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
 Uploaders: Barry deFreese <bdefreese@debian.org>
-Standards-Version: 3.8.4
+Standards-Version: 3.9.2
 Build-Depends: debhelper (>= 8),
                nasm [any-i386],
                libx11-dev, 
