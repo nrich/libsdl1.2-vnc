@@ -2,6 +2,8 @@
 
 SHLIBVER = 1.2.10-1
 
+DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
+
 confflags = --disable-rpath --enable-sdl-dlopen --disable-loadso \
             --disable-video-ggi --disable-video-svga --disable-video-aalib \
             --disable-nas --disable-esd --disable-arts \
