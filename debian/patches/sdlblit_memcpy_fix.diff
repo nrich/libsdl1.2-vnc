@@ -1,0 +1,19 @@
+Description: Fixed bug #1090 (SDL_BlitCopyOverlap() assumes memcpy() operates in order)
+  The much more complete fix is in SDL 1.3, but this is a band-aid that will fix the bug for 1.2.
+Author: Sam Lantinga <slouken@libsdl.org>
+Origin: http://hg.libsdl.org/SDL/rev/d898ee5431f5
+Bug: http://bugzilla.libsdl.org/show_bug.cgi?id=1090
+Bug-Debian: http://bugs.debian.org/626048
+Bug-Ubuntu: https://launchpad.net/bugs/725044
+
+--- a/src/video/SDL_blit.c
++++ b/src/video/SDL_blit.c
+@@ -214,7 +214,7 @@
+ 	dstskip = w+info->d_skip;
+ 	if ( dst < src ) {
+ 		while ( h-- ) {
+-			SDL_memcpy(dst, src, w);
++			SDL_memmove(dst, src, w);
+ 			src += srcskip;
+ 			dst += dstskip;
+ 		}

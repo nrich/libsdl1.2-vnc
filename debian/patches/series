@@ -9,3 +9,4 @@ joystick_crash.diff
 dont_propagate_lpthread.diff
 fixmouseclicks.diff
 disappearingcursor.diff
+sdlblit_memcpy_fix.diff
