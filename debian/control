@@ -52,7 +52,7 @@ Description: Simple DirectMedia Layer
  drivers and OSS, ALSA, NAS and PulseAudio sound drivers.
 
 Package: libsdl1.2debian-udeb
-XC-Package-Type: udeb
+Package-Type: udeb
 Architecture: any
 Section: debian-installer
 Priority: extra
