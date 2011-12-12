@@ -18,6 +18,9 @@ libsdl1.2 (1.2.14-7) UNRELEASED; urgency=low
   * Override package-name-doesnt-match-sonames lintian warning.
   * Add a debug package. (Closes: #600292)
   * Add myself as uploader.
+  * Switch to debhelper compat level v9.
+    - Convert to multiarch. (Closes: #636605)
+    - Exports hardening build flags.
 
   [ Dominique Dumont ]
   * control: replaced XC-Package-Type with Package-Type tag

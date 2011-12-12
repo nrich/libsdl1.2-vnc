@@ -18,7 +18,8 @@ udeb_confflags = --enable-video-directfb \
                  --disable-video-opengl --disable-video-xbios \
                  --disable-video-gem --disable-video-caca \
                  --disable-audio \
-                 --disable-oss --disable-alsa --disable-pulseaudio
+                 --disable-oss --disable-alsa --disable-pulseaudio \
+                 --libdir=\$${prefix}/lib
 
 # Only use NASM routines on x86 CPUs
 ifeq ($(DEB_HOST_ARCH_CPU),i386)
@@ -47,7 +48,7 @@ override_dh_auto_build:
 override_dh_auto_install:
 	dh_auto_install -Bbuilddir/all
 	dh_auto_install -Bbuilddir/udeb --destdir=debian/tmp-udeb
-	sed -i -e "s/^dependency_libs=.*/dependency_libs=''/" debian/tmp/usr/lib/libSDL.la
+	sed -i -e "s/^dependency_libs=.*/dependency_libs=''/" debian/tmp/usr/lib/*/libSDL.la
 
 override_dh_auto_clean:
 	dh_auto_clean -Bbuilddir/all

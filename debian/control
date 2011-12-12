@@ -5,7 +5,7 @@ Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.de
 Uploaders: Barry deFreese <bdefreese@debian.org>,
            Felix Geyer <debfx-pkg@fobos.de>
 Standards-Version: 3.9.2
-Build-Depends: debhelper (>= 8),
+Build-Depends: debhelper (>= 8.9.0~),
                nasm [any-i386],
                libx11-dev, 
                libxext-dev,
@@ -26,6 +26,8 @@ Homepage: http://www.libsdl.org/
 
 Package: libsdl1.2debian
 Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Replaces: libsdl1.2debian-all,
           libsdl1.2debian-alsa,
@@ -89,6 +91,7 @@ Description: Simple DirectMedia Layer development files
 
 Package: libsdl1.2-dbg
 Architecture: any
+Multi-Arch: same
 Priority: extra
 Section: debug
 Depends: ${misc:Depends},
