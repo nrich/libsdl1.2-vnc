@@ -21,6 +21,7 @@ libsdl1.2 (1.2.14-7) UNRELEASED; urgency=low
   * Switch to debhelper compat level v9.
     - Convert to multiarch. (Closes: #636605)
     - Exports hardening build flags.
+  * Remove the .la file.
 
   [ Dominique Dumont ]
   * control: replaced XC-Package-Type with Package-Type tag
