@@ -1,4 +1,4 @@
-libsdl1.2 (1.2.14-7) UNRELEASED; urgency=low
+libsdl1.2 (1.2.14-7) unstable; urgency=low
 
   [ Felix Geyer ]
   * Remove all patches that were disabled.
@@ -25,9 +25,9 @@ libsdl1.2 (1.2.14-7) UNRELEASED; urgency=low
 
   [ Dominique Dumont ]
   * control: replaced XC-Package-Type with Package-Type tag
-  * added missing lintian overrides
+  * added missing lintian overrides.
 
- -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 30 Nov 2011 18:00:50 +0100
+ -- Felix Geyer <debfx-pkg@fobos.de>  Sun, 08 Jan 2012 18:33:39 +0100
 
 libsdl1.2 (1.2.14-6.4) unstable; urgency=low
 
