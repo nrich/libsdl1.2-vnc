@@ -9,4 +9,3 @@ joystick_crash.diff
 dont_propagate_lpthread.diff
 fixmouseclicks.diff
 disappearingcursor.diff
-x11_add_support_NET_WM_PID.diff
