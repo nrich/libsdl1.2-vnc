@@ -1,6 +1,5 @@
 no_yasm.diff
 nasm_include.diff
-disable_ipod.diff
 relibtoolize.diff
 kfreebsd_gnu.diff
 x11_keytounicode.diff
