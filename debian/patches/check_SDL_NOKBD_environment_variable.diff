@@ -1,7 +1,15 @@
- 1.2.13-4+nmu2: Closes: #438915
----
- src/video/fbcon/SDL_fbvideo.c |   20 ++++++++++++--------
- 1 file changed, 12 insertions(+), 8 deletions(-)
+Description: disable keyboard and mouse in fbcon
+ Introduced in 1.2.13-5 (Thu, 01 Oct 2009 16:45:49 -0400).
+ .
+ Upstream will not include it:
+   Sam Lantinga 2012-01-22 10:50:19 PST
+ .
+   I'm going to pass on this patch, but feel free to continue including it with
+   Debian.
+Author: Bernhard Kauer <kauer@os.inf.tu-dresden.de>
+Last-Update: 2012-01-22
+Bug-Debian: http://bugs.debian.org/438915
+Forwarded: http://bugzilla.libsdl.org/show_bug.cgi?id=1391
 
 Index: SDL-1.2.14/src/video/fbcon/SDL_fbvideo.c
 ===================================================================
