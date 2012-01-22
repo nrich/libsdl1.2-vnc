@@ -5,4 +5,3 @@ x11_keytounicode.diff
 check_SDL_NOKBD_environment_variable.diff
 joystick_crash.diff
 dont_propagate_lpthread.diff
-fixmouseclicks.diff
