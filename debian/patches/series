@@ -1,4 +1,3 @@
-nasm_include.diff
 relibtoolize.diff
 kfreebsd_gnu.diff
 x11_keytounicode.diff
