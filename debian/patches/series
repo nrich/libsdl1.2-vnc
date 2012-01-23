@@ -1,3 +1,3 @@
 x11_keytounicode.diff
-check_SDL_NOKBD_environment_variable.diff
 dont_propagate_lpthread.diff
+#check_SDL_NOKBD_environment_variable.diff
