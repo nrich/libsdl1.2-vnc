@@ -1,3 +1,36 @@
+libsdl1.2 (1.2.15-1) instable; urgency=low
+
+  * New upstream release
+  * Seting DM-Upload-Allowed:yes and added myself to uploaders
+  * Removed patches:
+    - sdlblit_memcpy_fix.diff: it was backported from upstream
+    - joystick_crash.diff: it was backported from upstream (changeset 3590
+      493f252a455c)
+    - x11_add_support_NET_WM_PID.diff: applied upstream (changeset 6169
+      6f3e5ccfd585)
+    - disable_ipod.diff: it wasn't documented nor appeared anywhere in the
+      changelog, and it only disabled its support in the configure script (and
+      the option to add ipod support is off by default, at least in the current
+      version)
+    - disappearingcursor.diff: applied upstream (changeset 4557 4aa31b9207f2)
+    - fixmouseclicks.diff: it was part of a fix applied upstream (same as for
+      the patch disappearingcursor.diff)
+    - no_yasm.diff: applied upstream, picked from Debian (changeset 4538
+      74b5387da0c4)
+    - nasm_include.diff: applied upstream, picked from Debian (changeset 4539
+      d2517c0de52b)
+    - kfreebsd_gnu.diff: applied upstream, picked from Debian (changeset 4537
+      cd344ebc14e9)
+    - relibtoolize.diff: substituted with dh_autoreconf
+  * Disable patch check_SDL_NOKBD_environment_variable.diff at least
+    temporarily, it was rejected explicitly by upstream and it doesn't apply
+    cleanly, so it will need some work/thought
+  * Document remaining patches, refresh them
+  * debian/rules:
+    - dh_install ... -XlibSDLmain.la: to avoid installing this new .la file
+
+ -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Sun, 22 Jan 2012 23:44:46 +0000
+
 libsdl1.2 (1.2.14-7) unstable; urgency=low
 
   [ Felix Geyer ]
