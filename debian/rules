@@ -59,7 +59,7 @@ override_dh_auto_clean:
 
 override_dh_install:
 	dh_install -plibsdl1.2debian-udeb --sourcedir=debian/tmp-udeb
-	dh_install --remaining-packages --fail-missing -XlibSDL.la
+	dh_install --remaining-packages --fail-missing -XlibSDL.la -XlibSDLmain.la
 
 override_dh_installdocs:
 	dh_installdocs -Xdocs/man3/SDL
