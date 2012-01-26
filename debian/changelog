@@ -1,7 +1,7 @@
-libsdl1.2 (1.2.15-1) instable; urgency=low
+libsdl1.2 (1.2.15-1) unstable; urgency=low
 
   * New upstream release
-  * Seting DM-Upload-Allowed:yes and added myself to uploaders
+  * Seting DM-Upload-Allowed:yes and added myself to Uploaders
   * Removed patches:
     - sdlblit_memcpy_fix.diff: it was backported from upstream
     - joystick_crash.diff: it was backported from upstream (changeset 3590
@@ -29,7 +29,7 @@ libsdl1.2 (1.2.15-1) instable; urgency=low
   * debian/rules:
     - dh_install ... -XlibSDLmain.la: to avoid installing this new .la file
 
- -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Sun, 22 Jan 2012 23:44:46 +0000
+ -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Thu, 26 Jan 2012 20:31:21 +0000
 
 libsdl1.2 (1.2.14-7) unstable; urgency=low
 
