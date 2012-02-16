@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-SHLIBVER = 1.2.10-1
+SHLIBVER = 1.2.11
 
 DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 
