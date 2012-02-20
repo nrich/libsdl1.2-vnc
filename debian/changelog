@@ -3,6 +3,7 @@ libsdl1.2 (1.2.15-2) UNRELEASED; urgency=low
   * Add fix_build_joystick_freebsd.diff by Robert Millan to fix build
     on kfreebsd. (Closes: #659615)
   * Bump shlibs version to 1.2.11.
+  * Bump debhelper build-dependency to >= 9.
 
  -- Felix Geyer <debfx-pkg@fobos.de>  Thu, 16 Feb 2012 16:14:14 +0100
 
