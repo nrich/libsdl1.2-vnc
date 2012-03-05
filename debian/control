@@ -75,14 +75,7 @@ Section: libdevel
 Depends: ${misc:Depends},
          libsdl1.2debian (= ${binary:Version}),
          libx11-dev,
-         libglu1-mesa-dev,
-         libasound2-dev [linux-any],
-         libpulse-dev,
-         libdirectfb-dev (>= 0.9.22),
-         libcaca-dev,
-         libusbhid-dev [kfreebsd-any],
-         libxt-dev,
-         libxext-dev
+         libglu1-mesa-dev
 Replaces: libsdl-dev
 Conflicts: libsdl-dev
 Provides: libsdl-dev
