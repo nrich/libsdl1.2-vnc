@@ -75,7 +75,7 @@ Section: libdevel
 Depends: ${misc:Depends},
          libsdl1.2debian (= ${binary:Version}),
          libx11-dev,
-         libglu1-mesa-dev
+         libglu1-mesa-dev | libglu-dev
 Replaces: libsdl-dev
 Conflicts: libsdl-dev
 Provides: libsdl-dev

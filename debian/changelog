@@ -2,6 +2,7 @@ libsdl1.2 (1.2.15-3) UNRELEASED; urgency=low
 
   * Drop all -dev package dependencies of libsdl1.2-dev except libx11-dev and
     libglu1-mesa-dev.
+  * Add libglu-dev as an alternative to libglu1-mesa-dev.
 
  -- Felix Geyer <debfx-pkg@fobos.de>  Mon, 05 Mar 2012 15:22:09 +0100
 
