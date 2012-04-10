@@ -1,3 +1,12 @@
+libsdl1.2 (1.2.15-4) UNRELEASED; urgency=low
+
+  * debian/sdl-config1
+    - Fix typo, progam->program
+  * Add lintian-override "package-name-doesnt-match-sonames libSDL-1.2-0" for
+    libsdl1.2debian-udeb, copied from libsdl1.2debian
+
+ -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Tue, 10 Apr 2012 23:01:40 +0100
+
 libsdl1.2 (1.2.15-3) unstable; urgency=low
 
   [ Felix Geyer ]
