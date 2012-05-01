@@ -74,8 +74,14 @@ Architecture: any
 Section: libdevel
 Depends: ${misc:Depends},
          libsdl1.2debian (= ${binary:Version}),
+         libasound2-dev [linux-any],
+         libcaca-dev,
+         libdirectfb-dev (>= 0.9.22),
+         libglu1-mesa-dev | libglu-dev,
+         libpulse-dev,
+         libusbhid-dev [kfreebsd-any],
          libx11-dev,
-         libglu1-mesa-dev | libglu-dev
+         libxext-dev
 Replaces: libsdl-dev
 Conflicts: libsdl-dev
 Provides: libsdl-dev
