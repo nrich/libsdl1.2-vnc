@@ -7,6 +7,7 @@ libsdl1.2 (1.2.15-4) UNRELEASED; urgency=low
   [ Felix Geyer ]
   * Re-add dependencies to libsdl1.2-dev that are required for static linking.
     (Closes: #670122)
+  * Bump Standards-Version to 3.9.3, no further changes necessary.
 
  -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Tue, 10 Apr 2012 23:01:40 +0100
 
