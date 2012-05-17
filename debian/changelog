@@ -11,7 +11,7 @@ libsdl1.2 (1.2.15-4) UNRELEASED; urgency=low
 
   [ Sam Hocevar ]
   * debian/patches/fix_joystick_misc_axes.diff: fix a joystick remapping
-    bug causing some axes to malfunction.
+    bug causing some axes to malfunction (Closes: #673324).
 
  -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Tue, 10 Apr 2012 23:01:40 +0100
 
