@@ -1,3 +1,9 @@
+Description: Fix axis movement in some joysticks
+ Introduced in 1.2.15-3 (June 2012)
+Last-Update: 2012-06-11
+Bug-Debian: http://bugs.debian.org/673324
+Forwarded: http://bugzilla.libsdl.org/show_bug.cgi?id=1460
+
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
 index ee43974..80e46e4 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
