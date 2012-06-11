@@ -9,6 +9,7 @@ confflags = --disable-rpath --enable-sdl-dlopen --disable-loadso \
             --disable-nas --disable-esd --disable-arts \
             --disable-alsa-shared --disable-pulseaudio-shared \
             --disable-x11-shared \
+            --enable-input-tslib \
             --enable-video-directfb
 all_confflags = --enable-video-caca
 udeb_confflags = --enable-video-directfb \
