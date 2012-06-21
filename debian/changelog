@@ -1,3 +1,10 @@
+libsdl1.2 (1.2.15-5) unstable; urgency=low
+
+  * Restrict libts (touch screen) input method to linux-any architectures, not
+    available elsewhere
+
+ -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Thu, 21 Jun 2012 14:20:55 +0100
+
 libsdl1.2 (1.2.15-4) unstable; urgency=low
 
   [ Manuel A. Fernandez Montecelo ]
