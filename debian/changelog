@@ -8,6 +8,7 @@ libsdl1.2 (1.2.15-6) UNRELEASED; urgency=low
   * Drop obsolete DM-Upload-Allowed flag.
   * Bump Standards-Version to 3.9.4, no changes needed.
   * Add lintian override for dev-pkg-without-shlib-symlink.
+  * Switch to my @debian.org email address.
 
  -- Felix Geyer <fgeyer@debian.org>  Sat, 18 May 2013 14:07:04 +0200
 
