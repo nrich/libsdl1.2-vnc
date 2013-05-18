@@ -4,6 +4,9 @@ libsdl1.2 (1.2.15-6) UNRELEASED; urgency=low
   * Clean debian/tmp-udeb so the package can build twice in a row.
     (Closes: #708756)
 
+  [ Felix Geyer ]
+  * Drop obsolete DM-Upload-Allowed flag.
+
  -- Felix Geyer <fgeyer@debian.org>  Sat, 18 May 2013 14:07:04 +0200
 
 libsdl1.2 (1.2.15-5) unstable; urgency=low

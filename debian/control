@@ -5,7 +5,6 @@ Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.de
 Uploaders: Barry deFreese <bdefreese@debian.org>,
            Felix Geyer <debfx-pkg@fobos.de>,
            Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>
-DM-Upload-Allowed: yes
 Standards-Version: 3.9.3
 Build-Depends: debhelper (>= 9),
                dh-autoreconf,
