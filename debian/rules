@@ -57,6 +57,10 @@ override_dh_auto_clean:
 	dh_auto_clean -Bbuilddir/udeb
 	rm -f debian/examples.tar.gz
 
+override_dh_clean:
+	dh_clean
+	rm -rf debian/tmp-udeb
+
 override_dh_install:
 	dh_install -plibsdl1.2debian-udeb --sourcedir=debian/tmp-udeb
 	dh_install --remaining-packages --fail-missing -XlibSDL.la -XlibSDLmain.la
