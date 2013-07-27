@@ -12,6 +12,7 @@ libsdl1.2 (1.2.15-6) UNRELEASED; urgency=low
 
   [ Manuel A. Fernandez Montecelo ]
   * Switch to @debian.org address
+  * Bring the man page of sdl-config up to date (Closes: #695836)
 
  -- Felix Geyer <fgeyer@debian.org>  Sat, 18 May 2013 14:07:04 +0200
 
