@@ -10,6 +10,9 @@ libsdl1.2 (1.2.15-6) UNRELEASED; urgency=low
   * Add lintian override for dev-pkg-without-shlib-symlink.
   * Switch to my @debian.org email address.
 
+  [ Manuel A. Fernandez Montecelo ]
+  * Switch to @debian.org address
+
  -- Felix Geyer <fgeyer@debian.org>  Sat, 18 May 2013 14:07:04 +0200
 
 libsdl1.2 (1.2.15-5) unstable; urgency=low
