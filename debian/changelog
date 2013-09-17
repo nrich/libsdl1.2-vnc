@@ -1,9 +1,9 @@
-libsdl1.2 (1.2.15-7) UNRELEASED; urgency=low
+libsdl1.2 (1.2.15-7) unstable; urgency=low
 
   * Drop the udeb package as it doesn't have any reverse dependencies anymore.
     (Closes: #723165)
 
- -- Felix Geyer <fgeyer@debian.org>  Tue, 17 Sep 2013 17:51:37 +0200
+ -- Felix Geyer <fgeyer@debian.org>  Tue, 17 Sep 2013 18:26:42 +0200
 
 libsdl1.2 (1.2.15-6) unstable; urgency=low
 
