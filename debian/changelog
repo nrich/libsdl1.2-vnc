@@ -3,6 +3,8 @@ libsdl1.2 (1.2.15-8) UNRELEASED; urgency=low
   * Remove permanently patch check_SDL_NOKBD_environment_variable.diff, it
     was rejected explicitly by upstream and could not be applied cleanly,
     was already disabled fore more than a year
+  * Document fix_joystick_misc_axes.diff with the latest development,
+    submitted upstream again for re-evaluation
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 20 Oct 2013 01:16:39 +0100
 
