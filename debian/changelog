@@ -1,3 +1,11 @@
+libsdl1.2 (1.2.15-8) UNRELEASED; urgency=low
+
+  * Remove permanently patch check_SDL_NOKBD_environment_variable.diff, it
+    was rejected explicitly by upstream and could not be applied cleanly,
+    was already disabled fore more than a year
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 20 Oct 2013 01:16:39 +0100
+
 libsdl1.2 (1.2.15-7) unstable; urgency=low
 
   * Drop the udeb package as it doesn't have any reverse dependencies anymore.
