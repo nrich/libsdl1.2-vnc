@@ -5,6 +5,9 @@ libsdl1.2 (1.2.15-8) UNRELEASED; urgency=low
     was already disabled fore more than a year
   * Document fix_joystick_misc_axes.diff with the latest development,
     submitted upstream again for re-evaluation
+  * Build-depend on autotools-dev to update config.{sub,guess} and modify
+    debian/rules to add support for new ports (needed for arm64)
+  * Use "dh_autoreconf --as-needed" in debian/rules
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 20 Oct 2013 01:16:39 +0100
 
