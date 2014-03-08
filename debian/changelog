@@ -1,3 +1,9 @@
+libsdl1.2 (1.2.15-9) UNRELEASED; urgency=medium
+
+  * Bump Policy Standards-Version to 3.9.5 (no changes needed)
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 08 Mar 2014 23:27:39 +0000
+
 libsdl1.2 (1.2.15-8) unstable; urgency=low
 
   * Remove permanently patch check_SDL_NOKBD_environment_variable.diff, it
