@@ -1,6 +1,11 @@
 libsdl1.2 (1.2.15-9) UNRELEASED; urgency=medium
 
   * Bump Policy Standards-Version to 3.9.5 (no changes needed)
+  * Use dh_autoreconf in debian/rules without calling ./autogen.sh and
+    perform other tricks to actually support new architectures (arm64,
+    powerpc64le, ...) (Closes: #735253)
+  * Do not build-depend on autotools-dev, dh-autoreconf is supposed to
+    supersede it
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 08 Mar 2014 23:27:39 +0000
 
