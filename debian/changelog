@@ -1,4 +1,4 @@
-libsdl1.2 (1.2.15-9) UNRELEASED; urgency=medium
+libsdl1.2 (1.2.15-9) unstable; urgency=medium
 
   * Bump Policy Standards-Version to 3.9.5 (no changes needed)
   * Use dh_autoreconf in debian/rules without calling ./autogen.sh and
@@ -7,7 +7,7 @@ libsdl1.2 (1.2.15-9) UNRELEASED; urgency=medium
   * Do not build-depend on autotools-dev, dh-autoreconf is supposed to
     supersede it
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 08 Mar 2014 23:27:39 +0000
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 09 Mar 2014 01:37:39 +0000
 
 libsdl1.2 (1.2.15-8) unstable; urgency=low
 
