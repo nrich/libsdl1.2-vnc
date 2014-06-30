@@ -15,7 +15,6 @@ Build-Depends: debhelper (>= 9),
                libxt-dev,
                libxv-dev,
                x11proto-core-dev,
-               libts-dev [linux-any],
                libaudiofile-dev,
                libpulse-dev,
                libgl1-mesa-dev,
@@ -69,7 +68,6 @@ Depends: ${misc:Depends},
          libpulse-dev,
          libusbhid-dev [kfreebsd-any],
          libx11-dev,
-         libts-dev [linux-any],
          libxext-dev
 Replaces: libsdl-dev
 Conflicts: libsdl-dev

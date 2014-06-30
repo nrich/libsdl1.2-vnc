@@ -1,3 +1,10 @@
+libsdl1.2 (1.2.15-10) UNRELEASED; urgency=medium
+
+  [ Hector Oron ]
+  * d/control: remove libts-dev dependency. (Closes: #751765)
+
+ -- Felix Geyer <fgeyer@debian.org>  Mon, 30 Jun 2014 19:01:12 +0200
+
 libsdl1.2 (1.2.15-9) unstable; urgency=medium
 
   * Bump Policy Standards-Version to 3.9.5 (no changes needed)
