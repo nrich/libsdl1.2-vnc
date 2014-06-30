@@ -3,6 +3,11 @@ libsdl1.2 (1.2.15-10) UNRELEASED; urgency=medium
   [ Hector Oron ]
   * d/control: remove libts-dev dependency. (Closes: #751765)
 
+  [ Felix Geyer ]
+  * Enable X11 backingstore only when SDL_VIDEO_X11_BACKINGSTORE is set to
+    prevent tearing. (Closes: #747168)
+    - Add sdl-check-for-SDL_VIDEO_X11_BACKINGSTORE.patch
+
  -- Felix Geyer <fgeyer@debian.org>  Mon, 30 Jun 2014 19:01:12 +0200
 
 libsdl1.2 (1.2.15-9) unstable; urgency=medium
